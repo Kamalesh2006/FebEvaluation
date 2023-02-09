@@ -13,7 +13,7 @@ public class Assignment04 {
                 continue;
             String partOfLoginAttempt = loginAttempt.substring(index,index+tempPass.length());
             if(tempPass.equals(partOfLoginAttempt)){
-                String attempt = createLogin+" "+partOfLoginAttempt;
+                String attempt = createLogin+partOfLoginAttempt+" ";
                 String result = permutePassword(users, loginAttempt, index+tempPass.length(),attempt);
                 if(!result.equals("null")){
                     return result;
