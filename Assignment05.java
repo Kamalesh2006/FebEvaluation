@@ -1,7 +1,13 @@
 import java.util.Scanner;
 
 public class Assignment05 {
-    public static void palindromeFinder(String input, int[] indexArr){
+    public static void palindromeFinder(String input, int left, int right){
+        char[] hash = new char[26];
+        for(int i = left; i<right;i++){
+            int index = input.charAt(i)-97;
+            //since the given input consist only of lower case alphabets
+            hash[index]++;
+        }
         
     }
     public static void main(String[] args) {
@@ -11,12 +17,11 @@ public class Assignment05 {
         System.out.println("Enter the no of days ");
         int q = sh.nextInt();
         while(q>0){
-            int[] indexArr = new int[2];
             System.out.println("Enter the l index ");
-            indexArr[0]= sh.nextInt();
+            int left = sh.nextInt();
             System.out.println("Enter the r index");
-            indexArr[1]= sh.nextInt();
-            palindromeFinder(input, indexArr);
+            int right = sh.nextInt();
+            palindromeFinder(input, left, right);
             q--;
         }
         sh.close();
