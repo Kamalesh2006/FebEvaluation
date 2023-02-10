@@ -4,7 +4,7 @@ public class Assignment03 {
     /**
      * 
      * @param expenditure
-     * @param d denotes the number of trailing days after which bank will send notification according to expense. 
+     * @param day denotes the number of trailing days after which bank will send notification according to expense. 
      * @return
      */
     public static int notifyCustomer(int[] expenditure, int day){
